@@ -15,10 +15,13 @@ console.log(`the sum of ${x} and ${y} is ${x + y}`);
 
 
 // 2- multi line string
-const s = `This is \`a multi-line
+const s = `This is a \`multi-line
 string that spans across
 several lines.`;
 console.log(s);
+
+const s2 = "lorem ipsum hfbdfnjk\" dnkf jkd";
+// escaping character \
 
 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -37,6 +40,16 @@ for (let i = 0; i < people.length; i++) {
     console.log(people[i]);
 }
 
-people.forEach((item) => {
+people.forEach(displayName);
+
+function displayName(item, index) {
+    console.log(index);
     console.log(item);
-});
+}
+
+// let displayName = (item,index) => {
+//   console.log(item);
+// }
+// people.forEach(displayName);
+
+
