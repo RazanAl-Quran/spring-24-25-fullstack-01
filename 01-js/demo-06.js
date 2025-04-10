@@ -63,3 +63,10 @@ step1(() => {
 });
 
 console.log('hi 2');
+
+
+// Example 
+// log hi 1
+// fetch data from api or db
+// render data
+// log hi 2
