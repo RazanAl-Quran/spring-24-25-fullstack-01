@@ -20,7 +20,15 @@ function People() {
             favoritePet,
             gender
         };
+        // Object Property Value Shorthand
 
+
+        // let newPerson = {
+        //     username:username,
+        //     height:height,
+        //     favoritePet:favoritePet,
+        //     gender:gender
+        // };
         // setPeople(people.push(newPerson));
         setPeople([...people, newPerson]);
 
@@ -31,7 +39,7 @@ function People() {
         setGender("");
 
 
-        // console.log(people.length);
+        console.log(people.length);
 
 
     }
@@ -83,7 +91,7 @@ function People() {
 
             <ul style={{ marginTop: "20px", listStyle: "none", padding: 0 }}>
                 {people.map((person, index) => {
-                    const emoji = person.gender === "Male" ? "👨" : "👩";
+                    const emoji = person.gender === "Male" ? "👨" : "👩"; //ternary if
                     return (
                         <li key={index}>
                             {emoji} <strong>{person.username}</strong> — Height: {person.height}, Favorite Pet: {person.favoritePet}
@@ -91,7 +99,6 @@ function People() {
                     );
                 })}
             </ul>
-
 
         </div>
 

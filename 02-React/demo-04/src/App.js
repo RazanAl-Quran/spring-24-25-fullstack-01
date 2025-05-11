@@ -12,7 +12,7 @@ function App() {
 
 
   useEffect(() => {
-    axios("https://digimon-api.vercel.app/api/digimon")
+    axios("https://digimon-api.vercel.p/api/digimon")
       .then((digomonsResponse) => {
         // console.log(digomonsResponse.data.slice(0,10));
         setDigimons(digomonsResponse.data.slice(0, 10));
@@ -20,11 +20,11 @@ function App() {
       })
       .catch((error) => {
         // console.log(error);
-        setError("Failed getting the data");
+        setError(error);
       })
   }, []);
 
-  if(loading)  return <p>🔄 Loading Digimon...</p>;
+  // if(loading)  return <p>🔄 Loading Digimon...</p>;
   if(error)  return <p style={{ color: "red" }}>❌ {error}</p>;
 
 
